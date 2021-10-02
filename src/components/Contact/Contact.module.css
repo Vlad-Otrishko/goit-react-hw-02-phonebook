@@ -1,0 +1,16 @@
+.record {
+    display:flex;
+    flex-basis: calc(100%/3*2);
+    justify-content:space-evenly;
+    align-items: center;
+}
+.name {
+    text-decoration: underline;
+    font-style: italic;
+}
+.name,.number, .spacing {
+    flex-basis: calc(100%/3);
+    font-size:24px;
+    font-weight:700;
+    text-align:center;
+}

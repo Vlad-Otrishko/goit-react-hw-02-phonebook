@@ -1,0 +1,17 @@
+.filter {
+    display: block;
+    min-width:400px;
+    min-height:50px;
+    margin: 0 auto;
+    padding-left:15px;
+    font-size: 24px;
+    border: thick double;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);;
+}
+.filterLabel {
+    display: block;
+    margin: 0 auto;
+    font-size: 24px;
+    font-weight: 700;
+    text-align:center;
+}

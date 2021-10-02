@@ -1,0 +1,37 @@
+.form{
+    display:block;
+    margin: 0 auto;
+    text-align: center;
+}
+.wrapper {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.input {
+    display: block;
+    min-width:400px;
+    min-height:50px;
+    /* margin: 0 auto; */
+    padding-left:15px;
+    font-size: 24px;
+    border: thick double;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
+Label {
+    display: block;
+    margin: 0 auto;
+    font-size: 24px;
+    font-weight: 700;
+    text-align:center;
+}
+.submitButton {
+    min-width: 300px;
+    min-height: 40px;
+    margin-top:50px;
+    margin-bottom: 50px;
+    font-size: 24px;
+    border: thick;
+    border-radius:10px;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
