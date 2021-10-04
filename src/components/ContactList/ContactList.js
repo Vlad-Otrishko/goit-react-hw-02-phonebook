@@ -16,7 +16,7 @@ const ContactList = ({ visibleList, onDelete }) => {
             <button
               type="button"
               className={s.deleteButton}
-              onClick={() => onDelete(item.id)}
+              onClick={()=>onDelete(item.id)}
             ></button>
           </li>
         ))}

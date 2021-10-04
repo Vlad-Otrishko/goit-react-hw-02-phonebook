@@ -15,16 +15,25 @@ class App extends React.Component {
       { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
     ],
     filter: ''
-      };
+  };
+  
+
   formSubmitHandler = newRecord => {
+    const normalizedNewName = newRecord.name.toLowerCase();
+    const isUnique = !this.state.contacts.some(({ name }) =>
+      name.toLowerCase() === normalizedNewName);
+    if (!isUnique) {
+      alert('THIS NAME IS ALREADY PRESENT IN A PHONEBOOK');
+      return
+    }
     this.setState(previous => {
-      if (previous.contacts.filter(({ name }) => name.toLowerCase() === newRecord.name.toLowerCase()).length !== 0)
-      { alert('THIS NAME IS ALREADY PRESENT IN A PHONEBOOK');return}
       newRecord.id = shortid.generate();
       return {contacts: [...previous.contacts, newRecord]}
     }
      )
   };
+
+
   updateFilter = (e) => {
     this.setState({ filter: e.currentTarget.value });
   };
@@ -39,6 +48,8 @@ class App extends React.Component {
       return { contacts: previous.contacts.filter(contact => contact.id !== toDeleteId) }
     })
   }
+
+  
   render() {
     return (
       <div className={s.container}>
